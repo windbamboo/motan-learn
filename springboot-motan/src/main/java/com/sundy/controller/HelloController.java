@@ -14,12 +14,15 @@
 package com.sundy.controller;
 
 import com.sundy.motan.service.AnnotationService;
-import com.sundy.motan.service.MotanDemoService;
 import com.weibo.api.motan.config.springsupport.annotation.MotanReferer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import okhttp3.OkHttpClient;
+
+import java.io.IOException;
 
 @RestController
 public class HelloController {
@@ -27,11 +30,12 @@ public class HelloController {
     @MotanReferer(basicReferer = "motantestClientBasicConfig", group = "motan-demo-rpc", directUrl = "127.0.0.1:8002")
     AnnotationService service;
 
+
     @RequestMapping("/home")
     @ResponseBody
-    public ResponseEntity home() {
+    public ResponseEntity home() throws IOException, InterruptedException {
         String result = service.hello("test");
-        System.out.println("#############  spring boot call motan result: "+result);
+        System.out.println("#############  spring boot call motan result: " + result);
         return ResponseEntity.ok(result);
     }
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="motan-ac-api" />
+        <module name="motan-ac-client" />
+        <module name="motan-ac-server" />
+        <module name="motan-api" />
+        <module name="motan-client" />
+        <module name="motan-server" />
+        <module name="springboot-motan" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="motan-ac-api" target="1.5" />
+      <module name="motan-ac-client" target="1.5" />
+      <module name="motan-ac-server" target="1.5" />
+      <module name="motan-api" target="1.5" />
+      <module name="motan-client" target="1.5" />
+      <module name="motan-parent" target="1.5" />
+      <module name="motan-server" target="1.5" />
+      <module name="springboot-motan" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

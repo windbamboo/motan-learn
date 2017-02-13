@@ -1,4 +1,4 @@
-package com.sundy.motan.server;
+package com.sundy.ac.server;
 
 import com.weibo.api.motan.common.MotanConstants;
 import com.weibo.api.motan.util.MotanSwitcherUtil;
@@ -12,6 +12,6 @@ public class ZookeeperDemoServer {
     public static void main(String[] args) throws InterruptedException {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:motan_demo_server_zookeeper.xml");
         MotanSwitcherUtil.setSwitcherValue(MotanConstants.REGISTRY_HEARTBEAT_SWITCHER, true);
-        System.out.println("motan server start...");
+        System.out.println("ac server start...");
     }
 }

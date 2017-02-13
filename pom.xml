@@ -12,6 +12,9 @@
         <module>motan-api</module>
         <module>motan-client</module>
         <module>motan-server</module>
+        <module>motan-ac-api</module>
+        <module>motan-ac-client</module>
+        <module>motan-ac-server</module>
     </modules>
 
     <dependencyManagement>

@@ -7,8 +7,6 @@
 
     <motan:registry regProtocol="zookeeper" name="my_zookeeper" address="127.0.0.1:2181,127.0.0.1:2181,127.0.0.1:2181"/>
 
-    <!-- service implemention bean -->
-    <bean id="motanDemoServiceImpl" class="com.sundy.motan.server.MotanDemoServiceImpl" />
-    <!-- exporting service by Motan -->
-    <motan:service interface="com.sundy.motan.service.MotanDemoService" registry="my_zookeeper" ref="motanDemoServiceImpl" export="8004" />
+    <!-- reference to the remote service -->
+    <motan:referer id="userService" interface="com.sundy.ac.service.UserService"  registry="my_zookeeper" />
 </beans>
